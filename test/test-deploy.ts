@@ -1,11 +1,11 @@
 import { assert, expect } from 'chai';
 import { ethers } from 'hardhat';
 // Types
-import { Contract, ContractFactory } from 'ethers';
+import { SimpleStorage, SimpleStorage__factory } from '../typechain';
 
 describe('SimpleStorage', function () {
-  let SimpleStorageFC: ContractFactory;
-  let simpleStorage: Contract;
+  let SimpleStorageFC: SimpleStorage__factory;
+  let simpleStorage: SimpleStorage;
 
   beforeEach(async () => {
     SimpleStorageFC = await ethers.getContractFactory('SimpleStorage');
@@ -56,6 +56,6 @@ describe('SimpleStorage', function () {
 
     const favNumber = await simpleStorage.nameToFavoriteNumber(name);
 
-    assert.equal(favNumber, expectedNumber);
+    assert.equal(favNumber.toString(), expectedNumber);
   });
 });
