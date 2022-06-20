@@ -4,6 +4,19 @@ This project demonstrates an advanced Hardhat use case, integrating other tools 
 
 The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
 
+Useful commands for local development:
+
+```shell
+yarn hardhat # See all availbale commands and custom tasks
+yarn compile # Compile the contract
+yarn start # Deploys & verifies the contract to Alchemy rinkeby network
+yarn clean # Cleans artifacts
+yarn coverage # Run tests and see coverage for solidty contract
+yarn hardhat node # Runs a Node on your local machine, used for development
+yarn hardhat run scripts/deploy.ts --network localhost # Deploy to local hardhat Node
+yarn hardhat console --network localhost # Enter console and work with smart contracts by calling its methods
+```
+
 Try running some of the following tasks:
 
 ```shell
